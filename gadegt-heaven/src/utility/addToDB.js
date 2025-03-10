@@ -48,5 +48,5 @@ const getStoredWhisList=()=>{
 
 }
 
- export {addTostoredList,addTostoredCart}
+ export {addTostoredList,addTostoredCart,getStoredCart, getStoredWhisList}
 

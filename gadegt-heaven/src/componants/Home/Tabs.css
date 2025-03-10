@@ -1,0 +1,14 @@
+/* Tabs.css */
+
+  
+  .tab button:hover{
+    background-color: hsl(303, 71%, 28%);
+  }
+  
+  .tab button:focus  {
+    background-color: purple;
+    color:beige;
+    
+  }
+
+  

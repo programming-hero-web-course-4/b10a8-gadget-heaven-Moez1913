@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { getStoredCart, getStoredWhisList } from '../../utility/addToDB';
+import CartList from './CartList';
+import WhisList from './WhisList';
 
 const Dashboard = () => {
+    const[cartList,setCartList]=useState([]);
+    const[whisList,setWhisList]=useState([])    
+    const allProduct=useLoaderData();
+    useEffect(()=>{
+        const storedCartList=getStoredCart();
+       const addedToCart=allProduct.filter((product)=>storedCartList.includes(product.product_id));
+         setCartList(addedToCart);
+      
+    },[])
+
+    useEffect(()=>{
+        const storedWhisList=getStoredWhisList();
+        const addwhisList=allProduct.filter(product=>storedWhisList.includes(product.product_id));
+        setWhisList(addwhisList)
+    },[])
+
+   
     return (
 
         <Tabs>
@@ -10,43 +31,25 @@ const Dashboard = () => {
                 <h1 className="font-bold text-5xl text-white mb-6">Dashboard</h1>
                 <p className="font-normal text-sm text-white mb-6">Explore the latest gadgets that will take your experience to the next level. From smart devices to <br /> the coolest accessories, we have it all!</p>
                 <TabList>
-                    <Tab>Title 1</Tab>
-                    <Tab>Title 2</Tab>
-                </TabList>
+                  <Tab>Title 1</Tab>
+                   
+                   <Tab>Title 2</Tab>
+                   </TabList>
+                
             </div>
 
 
             <TabPanel>
-                <div className="card card-side bg-base-100 shadow-sm">
-                    <figure>
-                        <img
-                            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-                            alt="Movie" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">New movie is released!</h2>
-                        <p>Click the button to watch on Jetflix app.</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Watch</button>
-                        </div>
-                    </div>
-                </div>
+                 {
+                    cartList.map((product,index)=><CartList key={index} product={product}></CartList>)
+                 }
             </TabPanel>
             <TabPanel>
-                <div className="card card-side bg-base-100 shadow-sm">
-                    <figure>
-                        <img
-                            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-                            alt="Movie" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">New movie is released!</h2>
-                        <p>Click the button to watch on Jetflix app.</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Watch</button>
-                        </div>
-                    </div>
-                </div>
+                
+                    {
+                    whisList.map(product=><CartList key={product.product_id} product={product}></CartList>)
+                    }
+                
             </TabPanel>
         </Tabs>
 

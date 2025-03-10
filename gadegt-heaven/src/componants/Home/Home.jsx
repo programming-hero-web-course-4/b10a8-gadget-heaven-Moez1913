@@ -1,32 +1,66 @@
 import Banner from "../Banner/Banner";
-import Catagories from "../catagorys/Catagories";
+
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import Laptops from "../laptops/Laptops";
-import Phons from "../laptops/Phons";
+import { useLoaderData } from "react-router-dom";
+import Catagory from "../catagory/Catagory";
+import { useEffect, useRef, useState } from "react";
+import './Tabs.css';
 
 
 
 
 
 const Home = () => {
+    const [productAll, setProductAll] = useState([])
+    const [laptops, setLaptops] = useState([]);
+    const [phones, setPhones] = useState([]);
+    const [accessories, setAccessories] = useState([]);
+    const [smartWatches, setSmartWatches] = useState([]);
+    const [iphon, setIphon] = useState([]);
+    const[active,setActive]=useState(0);  
+    const [mackBook,setMackBook]=useState([]);    
+    const allProduct = useLoaderData();
+    const cardsSectionRef = useRef(null);
+
+    useEffect(() => {
+        setProductAll(allProduct);
+
+        const filteredLaptops = allProduct.filter(item => item.category === 'Laptops');
+        setLaptops(filteredLaptops);
+
+        const filteredPhones = allProduct.filter(item => item.category === 'Phones');
+        setPhones(filteredPhones);
+
+        const filreredAccessories = allProduct.filter(item => item.category === 'Accessories');
+        setAccessories(filreredAccessories);
+        const smartwatch = allProduct.filter(item => item.category === 'Smartwatch');
+        setSmartWatches(smartwatch);
+        const mackBook=allProduct.filter(item=>item.category==='MacBook'); 
+        setMackBook(mackBook);
+        const iphons = allProduct.filter(item => item.category === 'iPhone');
+        setIphon(iphons);
+    }, [allProduct])
+
+    const scrollToCardsSection = () => {
+        cardsSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
     return (
         <div>
-            <Banner></Banner>
-            <Tabs>
-                <section className="flex flex-row">
+    <Banner setActive={setActive} scrollToCardsSection={scrollToCardsSection}></Banner>
+            <Tabs selectedIndex={active} onSelect={index => setActive(index)}>
+                <section className="flex flex-row justify-between gap-5 w-11/12 mx-auto " ref={cardsSectionRef}>
 
-                    <div className=" flex flex-col flex-1 mt-52">
-                    
-                            <div className=" flex flex-col flex-1 mt-52">
-                            <Tab><button className="btn">All</button></Tab>
-                            <Tab><button className="btn">Laptops</button></Tab>
-                            <Tab><button className="btn">Phons</button></Tab>
-                            <Tab><button className="btn">Accessories</button></Tab>
-                            <Tab><button className="btn">Smart Watches</button></Tab>
-                            </div>
-                       
 
+                    <div className=" flex flex-col gap-5 w-60 h-[400px]  p-5  border-2 border-solid border-base-300 rounded-lg">
+                        <Tab className="tab butoon_tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">All Product</button></Tab>
+                        <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">Laptops</button></Tab>
+                        <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">Phons</button></Tab>
+                        <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">Accessories</button></Tab>
+                        <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">Smart Watches</button></Tab>
+                        <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">MacBook</button></Tab>
+                        <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">iPhon</button></Tab>
                     </div>
 
 
@@ -35,24 +69,67 @@ const Home = () => {
 
 
 
-                    <div className="grid grid-cols-1   gap-4  auto-rows-auto  col-span-3" hidden>
+
+
+
+                    <div className="grid    gap-4    col-span-3">
                         <TabPanel>
-                        <Catagories ></Catagories>
+                            <div className='grid grid-cols-3 object-cover gap-3'>
+                                {
+                                    productAll.map(product => <Catagory key={product.product_id} product={product}></Catagory>)
+                                }
+                            </div>
 
                         </TabPanel>
                         <TabPanel>
-                          <Laptops></Laptops>
+                            <div className='grid grid-cols-3 object-cover gap-3' >
+                                {
+                                    laptops.map(product => <Catagory key={product.product_id} product={product}></Catagory>)
+                                }
+                            </div>
                         </TabPanel>
                         <TabPanel>
-                        <Phons></Phons>
+                            <div className='grid grid-cols-3 object-cover gap-3'>
+                                {
+                                    phones.map(product => <Catagory key={product.product_id} product={product}></Catagory>)
+                                }
+                            </div>
                         </TabPanel>
                         <TabPanel>
-                           
+                            <div className='grid grid-cols-3 object-cover gap-3'>
+                                {
+                                    accessories.map(product => <Catagory key={product.product_id} product={product}></Catagory>)
+                                }
+                            </div>
+
                         </TabPanel>
                         <TabPanel>
-                       
+                            <div className='grid grid-cols-3 object-cover gap-3'>
+                                {
+                                    smartWatches.map(product => <Catagory key={product.product_id} product={product}></Catagory>)
+                                }
+                            </div>
+
                         </TabPanel>
-                        
+
+                        <TabPanel>
+                            <div className='grid grid-cols-3 object-cover gap-3'>
+                                {
+                                    mackBook.map(product => <Catagory key={product.product_id} product={product}></Catagory>)
+                                }
+                            </div>
+
+                        </TabPanel>
+
+                        <TabPanel>
+                            <div className='grid grid-cols-3 object-cover gap-3'>
+                                {
+                                    iphon.map(product => <Catagory key={product.product_id} product={product}></Catagory>)  
+                                }
+                            </div>
+
+                        </TabPanel>
+
                     </div>
                 </section>
             </Tabs>

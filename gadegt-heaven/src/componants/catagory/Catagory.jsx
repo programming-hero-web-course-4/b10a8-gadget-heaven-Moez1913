@@ -1,23 +1,23 @@
 
-import { NavLink } from 'react-router-dom';
-const Catagory = ({catagory}) => {
-    const {product_id,product_title,product_image}=catagory
-    return (
-        <div className="card bg-base-100 w-96 shadow-xl ">
-  <figure>
-    <img
-      src={product_image}
-      alt="Shoes" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary"><NavLink to={`/dtails/${product_id}`}>Details</NavLink></button>
+import { Link, NavLink } from 'react-router-dom';
+const Catagory = ({ product }) => {
+  const { product_id, product_title, product_image, price } = product;
+  return (
+    <div className="p-5 bg-base-100 w-80 shadow-xl border-2 border-solid border-base-300 rounded-lg ">
+      <figure>
+        <img className='w-72 h-48 object-cover border-2 border-solid border-base-300 rounded-lg'
+          src={product_image}
+          alt="Shoes" />
+      </figure>
+      <div className="card-body items-start">
+        <h2 className="card-title">{product_title}</h2>
+        <p>Price:{price}</p>
+
+        <button className="btn bg-white text-purple-500 border-2 border-solid border-purple-600 rounded-3xl w-40 h-12"><Link to={`/dtails/${product_id}`} >View Details</Link></button>
+
+      </div>
     </div>
-  </div>
-</div>
-    );
+  );
 };
 
 export default Catagory;

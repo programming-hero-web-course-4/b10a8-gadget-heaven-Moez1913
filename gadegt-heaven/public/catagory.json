@@ -26,7 +26,7 @@
     {
       "product_id": 3,
       "product_title": "Lenovo ThinkPad X1 Carbon",
-      "product_image": "https://i.ibb.co.com/SwFP5hxf/Lenovo-Think-Pad-X1-Carbon.jpg",
+      "product_image": "https://i.ibb.co.com/3mZh65y6/Microsoft-Surface-Laptop.jpg",
       "category": "Laptops",
       "price": 1799,
       "description": "Ultra-light business laptop with top-notch security.",
@@ -38,7 +38,7 @@
     {
       "product_id": 4,
       "product_title": "Asus ROG Zephyrus G14",
-      "product_image": "https://i.ibb.co.com/9HZYH1gC/Asus-ROG-Zephyrus-G14.jpg",
+      "product_image": "https://i.ibb.co.com/hJLDnhDC/delxp15.jpg",
       "category": "Laptops",
       "price": 1599,
       "description": "Gaming laptop with AMD Ryzen 9 and RTX 3060.",
@@ -50,7 +50,7 @@
     {
       "product_id": 5,
       "product_title": "Acer Swift 3",
-      "product_image": "https://i.ibb.co.com/Fk3JM9qg/Acer-Swift.jpg",
+      "product_image": "https://i.ibb.co.com/k2CWCPwC/HP-Spectre-x360.jpg",
       "category": "Laptops",
       "price": 899,
       "description": "Affordable and lightweight laptop for everyday use.",
@@ -74,7 +74,7 @@
     { 
       "product_id": 7,
       "product_title": "Samsung Galaxy S23 Ultra",
-      "product_image": "https://example.com/galaxys23ultra.jpg",
+      "product_image": "https://i.ibb.co.com/TMdp7cK8/freepik-the-style-is-candid-image-photography-with-natural-63515.jpg",
       "category": "Phones",
       "price": 1199,
       "description": "A powerhouse with a 200MP camera and S Pen integration.",
@@ -83,10 +83,22 @@
       "rating": 4.7,
       "warranty": "1 year"
     },
+    { 
+      "product_id": 21,
+      "product_title": "Huawei Nova-7",
+      "product_image": "https://i.ibb.co.com/rGmBC4x6/freepik-the-style-is-candid-image-photography-with-natural-63516.jpg",
+      "category": "Phones",
+      "price": 1199,
+      "description": "A Phone with stylish desing,strong camera capabilities.",
+      "specification": ["6.53-inch OLED display", "HiSilicon Kirin 985 5G(7nm)", "64MP camera"],
+      "availability": true,
+      "rating": 4.7,
+      "warranty": "1 year"
+    },
     {
       "product_id": 8,
       "product_title": "Google Pixel 8 Pro",
-      "product_image": "https://example.com/pixel8pro.jpg",
+      "product_image": "https://i.ibb.co.com/R4yg44FG/freepik-the-style-is-candid-image-photography-with-natural-58986.jpg",
       "category": "Phones",
       "price": 899,
       "description": "The best of Google with AI-powered features.",
@@ -98,7 +110,7 @@
     {
       "product_id": 9,
       "product_title": "Apple AirPods Pro",
-      "product_image": "https://example.com/airpodspro.jpg",
+      "product_image": "https://i.ibb.co.com/skWxtYw/freepik-the-style-is-candid-image-photography-with-natural-63514.jpg",
       "category": "Accessories",
       "price": 249,
       "description": "Premium wireless earbuds with active noise cancellation.",
@@ -110,7 +122,7 @@
     {
       "product_id": 10,
       "product_title": "Logitech MX Master 3S",
-      "product_image": "https://example.com/mxmaster3s.jpg",
+      "product_image": "https://i.ibb.co.com/Fk0XhPKc/freepik-the-style-is-candid-image-photography-with-natural-63513.jpg",
       "category": "Accessories",
       "price": 99,
       "description": "Advanced wireless mouse for productivity.",
@@ -122,7 +134,7 @@
     {
       "product_id": 11,
       "product_title": "Apple Watch Ultra",
-      "product_image": "https://example.com/applewatchultra.jpg",
+      "product_image": "https://i.ibb.co.com/jZ93374f/smart-Watch.jpg",
       "category": "Smartwatch",
       "price": 799,
       "description": "The ultimate smartwatch for extreme conditions.",
@@ -134,7 +146,7 @@
     {
       "product_id": 12,
       "product_title": "Samsung Galaxy Watch 6 Classic",
-      "product_image": "https://example.com/galaxywatch6.jpg",
+      "product_image": "https://i.ibb.co.com/fd6w1ZhZ/Screenshot-2025-03-10-165948.png",
       "category": "Smartwatch",
       "price": 349,
       "description": "A premium smartwatch with rotating bezel.",
@@ -146,7 +158,7 @@
     {
       "product_id": 13,
       "product_title": "MacBook Air M2",
-      "product_image": "https://example.com/macbookairm2.jpg",
+      "product_image": "https://i.ibb.co.com/xSYQWNkz/Screenshot-2025-03-10-171237.png",
       "category": "MacBook",
       "price": 1199,
       "description": "Thin and light laptop with M2 chip.",
@@ -158,7 +170,7 @@
     {
       "product_id": 14,
       "product_title": "MacBook Pro 14-inch",
-      "product_image": "https://example.com/macbookpro14.jpg",
+      "product_image": "https://i.ibb.co.com/5XQQDS4c/Screenshot-2025-03-10-170451.png",
       "category": "MacBook",
       "price": 1999,
       "description": "Powerful laptop for professionals with M2 Pro chip.",
@@ -170,7 +182,7 @@
     {
       "product_id": 15,
       "product_title": "iPhone 15 Pro",
-      "product_image": "https://example.com/iphone15pro.jpg",
+      "product_image": "https://i.ibb.co.com/b5QDmjD0/iPhon.jpg",
       "category": "iPhone",
       "price": 999,
       "description": "The latest iPhone with A17 chip and advanced camera system.",
@@ -182,7 +194,7 @@
     {
       "product_id": 16,
       "product_title": "iPhone 14",
-      "product_image": "https://example.com/iphone14.jpg",
+      "product_image": "https://i.ibb.co.com/b5QDmjD0/iPhon.jpg",
       "category": "iPhone",
       "price": 799,
       "description": "A powerful iPhone with a great camera and battery life.",
