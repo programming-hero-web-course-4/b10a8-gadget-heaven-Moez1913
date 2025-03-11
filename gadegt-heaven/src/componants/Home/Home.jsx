@@ -44,7 +44,7 @@ const Home = () => {
     }, [allProduct])
 
     const scrollToCardsSection = () => {
-        cardsSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        cardsSectionRef.current.scrollIntoView({ behavior: 'smooth'});
     }
 
     return (

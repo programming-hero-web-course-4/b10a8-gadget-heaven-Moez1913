@@ -7,10 +7,10 @@ const Navbar = () => {
   const location=useLocation();
   const isDashboard=location.pathname==='/dashboard';
   const navbarBgColor = location.pathname === '/dashboard' ? 'bg-white' : 'bg-[#9538E2]';
-  const textColor = isDashboard? 'text-gray-700' : 'text-white';
+  const textColor = isDashboard? 'text-gray-7000' : 'text-white';
   const borderStyle = isDashboard ? 'border-none' : 'border-t-2 border-solid border-base-400';
   return (
-    <div className={`${navbarBgColor} ${textColor} ${borderStyle} flex flex-row justify-between items-center max-w-7xl mt-7 py-4 mx-auto px-10 rounded-t-lg`}>
+    <div className={`${navbarBgColor} ${borderStyle} flex flex-row justify-between items-center max-w-7xl mt-7 py-4 mx-auto px-10 rounded-t-lg`}>
 
 
       <h3 className="text-white text-xl">Gadget Heaven </h3>

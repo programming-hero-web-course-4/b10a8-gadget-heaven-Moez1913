@@ -12,8 +12,8 @@ const Catagory = ({ product }) => {
       <div className="card-body items-start">
         <h2 className="card-title">{product_title}</h2>
         <p>Price:{price}</p>
-
-        <button className="btn bg-white text-purple-500 border-2 border-solid border-purple-600 rounded-3xl w-40 h-12"><Link to={`/dtails/${product_id}`} >View Details</Link></button>
+        <Link to={`/dtails/${product_id}`} >  <button className="btn bg-white text-purple-500 border-2 border-solid border-purple-600 rounded-3xl w-40 h-12">View Details</button></Link>
+      
 
       </div>
     </div>
