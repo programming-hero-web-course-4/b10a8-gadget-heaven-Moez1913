@@ -5,10 +5,17 @@
     background-color: hsl(303, 71%, 28%);
   }
   
-  .tab button:focus  {
+  .tab button:focus{
     background-color: purple;
     color:beige;
     
   }
+  .tab button:active{
+    background-color: rgb(250, 226, 8);
+    color:beige;
+  }
+  
+  
+
 
   

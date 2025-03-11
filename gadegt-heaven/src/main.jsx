@@ -15,20 +15,22 @@ import Help from './componants/Home/Help.jsx';
 
 
 const router = createBrowserRouter([
+  
   {
     path: "/",
     element: <Root></Root>,
     children: [
-      {
-        path: '/dtails/:productId',
-        element: <Dtails></Dtails>,
-        loader: () => fetch('./catagory.json')
-      },
+    
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('./catagory.json')
+        loader: () => fetch('/catagory.json')
 
+      },
+      {
+        path: '/dtails/:productId',
+        element: <Dtails></Dtails>,
+        loader: () => fetch('/catagory.json')
       },
 
       {
@@ -39,16 +41,18 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <Dashboard></Dashboard>,
-        loader: () => fetch('./catagory.json')
+        loader: () => fetch('/catagory.json')
       },
       {
         path:'/help',
         element:<Help></Help>
       }
+     
 
 
 
     ]
+  
   },
 
 ]);

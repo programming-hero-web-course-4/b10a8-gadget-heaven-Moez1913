@@ -12,7 +12,7 @@ import './Tabs.css';
 
 
 const Home = () => {
-    const [productAll, setProductAll] = useState([])
+
     const [laptops, setLaptops] = useState([]);
     const [phones, setPhones] = useState([]);
     const [accessories, setAccessories] = useState([]);
@@ -23,8 +23,9 @@ const Home = () => {
     const allProduct = useLoaderData();
     const cardsSectionRef = useRef(null);
 
+
     useEffect(() => {
-        setProductAll(allProduct);
+      
 
         const filteredLaptops = allProduct.filter(item => item.category === 'Laptops');
         setLaptops(filteredLaptops);
@@ -54,7 +55,7 @@ const Home = () => {
 
 
                     <div className=" flex flex-col gap-5 w-60 h-[400px]  p-5  border-2 border-solid border-base-300 rounded-lg">
-                        <Tab className="tab butoon_tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">All Product</button></Tab>
+                        <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">All Product</button></Tab>
                         <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">Laptops</button></Tab>
                         <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">Phons</button></Tab>
                         <Tab className="tab"><button className="btn w-48 h-12 bg-gray-300 border-2 border-solid border-base-300 rounded-[32px]">Accessories</button></Tab>
@@ -76,7 +77,7 @@ const Home = () => {
                         <TabPanel>
                             <div className='grid grid-cols-3 object-cover gap-3'>
                                 {
-                                    productAll.map(product => <Catagory key={product.product_id} product={product}></Catagory>)
+                                    allProduct.map(product => <Catagory key={product.product_id} product={product}></Catagory>)
                                 }
                             </div>
 
