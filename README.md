@@ -29,4 +29,6 @@ To get started with the project, follow these steps:
 
 1. Live Link:
    ```sh
-   git clone https://github.com/your-username/gadget-heaven.git
+   http://thundering-eggnog.surge.sh/
+   
+  
