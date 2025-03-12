@@ -29,6 +29,6 @@ To get started with the project, follow these steps:
 
 1. Live Link:
    ```sh
-   http://thundering-eggnog.surge.sh/
+   defective-punishment.surge.sh
    
   
