@@ -1,5 +1,5 @@
 import React from 'react';
-
+import img from '../../../public/assets/banner.jpg'
 const Banner = ({setActive,scrollToCardsSection}) => {
 
     const handelClick=()=>{
@@ -16,7 +16,7 @@ const Banner = ({setActive,scrollToCardsSection}) => {
                 <button onClick={handelClick} className="btn h-10  w-36 rounded-[32px] bg-white text-purple-600 ">Shop Now</button>
             </div>
             <div className="">
-                <img className=" p-5 border-2 border-solid border-base-400 rounded-lg backdrop-blur-md  relative   bottom-56 w-9/12 h-[500px] object-cover mx-auto " src="../../../public/assets/banner.jpg" alt="" />
+                <img className=" p-5 border-2 border-solid border-base-400 rounded-lg backdrop-blur-md  relative   bottom-56 w-9/12 h-[500px] object-cover mx-auto " src={img} alt="" />
             </div>
         </section>  
         </div>
